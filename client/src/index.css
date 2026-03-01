@@ -1,0 +1,37 @@
+@import "tailwindcss";
+
+/* In Tailwind v4, we use @theme to define variables.
+  This automatically creates utility classes like 'bg-primary' or 'text-bgDark'.
+*/
+@theme {
+  --font-sans: "Inter", sans-serif;
+
+  --color-bgDark: #0a0a0a;
+  --color-cardDark: #171717;
+  --color-primary: #3b82f6; 
+  --color-textLight: #e5e5e5;
+  --color-textGray: #a3a3a3;
+}
+
+/* Base Styles */
+body {
+  background-color: var(--color-bgDark);
+  color: var(--color-textLight);
+  font-family: var(--font-sans);
+  overflow-x: hidden; /* Prevents horizontal scroll */
+}
+
+/* Custom Scrollbar - The Premium Touch */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-bgDark);
+}
+::-webkit-scrollbar-thumb {
+  background: #262626;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-primary);
+}
