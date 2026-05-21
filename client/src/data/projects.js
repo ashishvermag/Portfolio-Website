@@ -1,55 +1,44 @@
 export const projectsData = [
   {
-    id: "1", // We use a simple string for the ID now
-    title: "E-Commerce Store",
-    image: "/images/project1.jpg", // We will set this up in Step 2!
-    description: "A full-stack e-commerce application built with modern web technologies.",
-    overview: "This project was built to solve X problem and allows users to do Y.",
-    role: "Full Stack Developer",
-    year: "2026",
-    features: [
-      "Real-time cart updates",
-      "Secure Stripe checkout",
-      "Mobile responsive design"
-    ],
-    technologies: ["React", "Tailwind CSS", "Node.js"],
-    githubLink: "https://github.com/yourusername/ecommerce",
-    liveLink: "https://ecommerce-live-link.com"
-  },
-  // You can copy and paste the block above to add a 2nd or 3rd project!
-
-  {
-    id: "2", // We use a simple string for the ID now
-    title: "Task Management App",
-    image: "/images/project2.jpg", // We will set this up in Step 2!
-    description: "A simple task management application to help users organize their daily activities.",
-    overview: "This project was built to solve X problem and allows users to do Y.",
-    role: "Frontend Developer",
-    year: "2026",
-    features: [
-      "Real-time cart updates",
-      "Secure Stripe checkout",
-      "Mobile responsive design"
-    ],
-    technologies: ["React", "Tailwind CSS", "Node.js"],
-    githubLink: "https://github.com/yourusername/task-management",
-    liveLink: "https://task-management-live-link.com"
+    id: "project-one", // This is the secret key for the URL!
+    title: "My First Project",
+    image:  null, // We will add real images later
+    description: "A quick summary for the home page card.",
+    technologies: ["React", "Tailwind"],
+    githubLink: "https://github.com/yourusername/repo",
+    liveLink: "https://your-live-link.com"
   },
   {
-    id: "3", // We use a simple string for the ID now
-    title: "Weather App",
-    image: "/images/project3.jpg", // We will set this up in Step 2!
-    description: "A simple weather application to provide real-time weather updates.",
-    overview: "This project was built to solve X problem and allows users to do Y.",
-    role: "Frontend Developer",
-    year: "2026",
-    features: [
-      "Real-time cart updates",
-      "Secure Stripe checkout",
-      "Mobile responsive design"
-    ],
-    technologies: ["React", "Tailwind CSS", "Node.js"],
-    githubLink: "https://github.com/yourusername/weather-app",
-    liveLink: "https://weather-app-live-link.com"
+    id: "pdf-chatbot", 
+    title: "Multi-Agent PDF Chatbot",
+    image: null, // Set to null so your sleek Text-Decoration fallback kicks in!
+    isAcademic: false, // This will trigger the "Academic Work" tag on your home page card
+    fallbackIcon: "bot", // This is optional since you have a default fallback, but you can specify different icons for different projects if you want!
+    description: "A RAG-powered conversational AI agent built with Streamlit, Gemini, and ChromaDB that allows you to chat with any PDF.",
+    technologies: ["Python", "Streamlit", "Gemini", "ChromaDB"],
+    githubLink: "https://github.com/ashishvermag/Multiagent-PDF-RAG/tree/master",
+    liveLink: ""
   },
+  {
+    id: "logic-synthesis", 
+    title: "Logic Synthesis Using GCN & CNN",
+    image: null, 
+    isAcademic: true, 
+    fallbackIcon: "cpu", // Renders the hardware CPU icon!
+    description: "An implementation of the Bulls-Eye framework combining Graph Neural Networks (GCN) and active few-shot learning to predict EDA synthesis delay outcomes.",
+    technologies: ["PyTorch", "GNN / CNN", "Simulated Annealing"],
+    githubLink: "https://github.com/ashishvermag/Logic-Synthesis-Using-Heuristics",
+    liveLink: ""
+  },
+  {
+    id: "hybrid-socket", 
+    title: "Hybrid Socket Communication",
+    image: null, 
+    isAcademic: true, 
+    fallbackIcon: "server", 
+    description: "A secure C++ client-server framework utilizing a hybrid TCP/UDP protocol, dynamic port allocation, and custom symmetric XOR encryption.",
+    technologies: ["C++", "POSIX Sockets", "TCP/UDP", "Cryptography"],
+    githubLink: "https://github.com/ashishvermag/Hybrid-Socket-Communication/tree/main", 
+    liveLink: ""
+  }
 ];

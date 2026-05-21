@@ -1,23 +1,9 @@
-import React, { useEffect, useState } from 'react';
-import API from '../api';
+import React from 'react';
 import ProjectCard from './ProjectCard';
+import { projectsData } from '../data/projects.js'; // 1. Import your local data
 
 const Projects = () => {
-  const [projects, setProjects] = useState([]);
-
-  // Fetch data when component loads
-  useEffect(() => {
-    const fetchProjects = async () => {
-      try {
-        const { data } = await API.get('/projects');
-        setProjects(data);
-      } catch (error) {
-        console.error("Error fetching projects:", error);
-      }
-    };
-
-    fetchProjects();
-  }, []);
+  // We no longer need useState or useEffect! The data is instantly available.
 
   return (
     <section id="projects" className="py-20 px-6 bg-bgDark">
@@ -32,12 +18,13 @@ const Projects = () => {
 
         {/* The Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.length > 0 ? (
-            projects.map((project) => (
-              <ProjectCard key={project._id} project={project} />
+          {projectsData.length > 0 ? (
+            projectsData.map((project) => (
+              // 2. Changed key from _id to id
+              <ProjectCard key={project.id} project={project} />
             ))
           ) : (
-            <p className="text-textGray">Loading projects...</p>
+            <p className="text-textGray">No projects added yet.</p>
           )}
         </div>
       </div>
