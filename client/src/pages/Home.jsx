@@ -12,8 +12,8 @@ const Home = () => {
       <Navbar />
       <Hero />
       <CodingProfiles />
-      <Skills />
       <Projects />
+      <Skills />
       <Contact />
       <footer className="py-6 text-center text-textGray text-sm border-t border-white/5 bg-[#0a0f1c]">
         <p>© {new Date().getFullYear()} Ashish Verma. All rights reserved.</p>

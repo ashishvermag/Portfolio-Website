@@ -52,7 +52,7 @@ const CodingProfiles = () => {
               <p className="text-slate-400 text-sm">@{LC_HANDLE}</p>
             </div>
             <a href={`https://leetcode.com/${LC_HANDLE}`} target="_blank" rel="noreferrer" className="text-slate-400 hover:text-[#FFA116] transition-colors">
-              <ExternalLink size={20} />
+              <ExternalLink size={25} />
             </a>
           </div>
 
@@ -96,7 +96,7 @@ const CodingProfiles = () => {
               </div>
             </div>
             <a href={`https://codeforces.com/profile/${CF_HANDLE}`} target="_blank" rel="noreferrer" className="text-slate-400 hover:text-[#3B5998] transition-colors">
-              <ExternalLink size={20} />
+              <ExternalLink size={25} />
             </a>
           </div>
 
