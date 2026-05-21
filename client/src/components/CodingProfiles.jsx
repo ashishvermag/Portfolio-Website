@@ -32,7 +32,7 @@ const CodingProfiles = () => {
   return (
     <section className="max-w-6xl mx-auto px-6 py-20 border-t border-white/5">
       <div className="flex items-center gap-4 mb-12">
-        <h2 className="text-3xl font-bold text-white">Competitive Programming</h2>
+        <h2 className="text-3xl font-bold text-white">DSA & Competitive Programming</h2>
         <div className="h-[1px] bg-white/10 flex-grow ml-4"></div>
       </div>
 

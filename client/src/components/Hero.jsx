@@ -28,19 +28,19 @@ const Hero = () => {
           {/* Main Headline */}
           <h1 className="text-5xl md:text-7xl font-bold text-textLight leading-tight tracking-tight">
             Hi, I'm Ashish.<br />
-            I build <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-400">systems & ML</span> models.
+            I build <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-400">full-stack web apps & AI</span> systems.
           </h1>
 
           {/* Subtext */}
           <p className="text-textGray text-lg md:text-xl max-w-2xl leading-relaxed">
-            I am a software engineer specializing in high-performance architecture. From parallel algorithms for external memory to advanced AI pipelines, I solve complex engineering challenges.
+            I am a software engineer specializing in the MERN stack and Artificial Intelligence. From architecting scalable web platforms to integrating advanced machine learning pipelines, I build intelligent digital experiences.
           </p>
 
           {/* Quick Stats / Achievements Bar */}
           <div className="flex flex-wrap items-center gap-3 md:gap-4 py-2">
             <div className="flex items-center gap-2 text-textLight text-sm md:text-base font-medium bg-white/5 px-4 py-2 rounded-lg border border-white/10">
               <Trophy size={18} className="text-primary" />
-              <span>GATE AIR 733 <span className="text-textGray font-normal">(99.4%ile)</span></span>
+              <span>GATE AIR 733 <span className="text-textGray font-normal">(99.4%)</span></span>
             </div>
             <div className="flex items-center gap-2 text-textLight text-sm md:text-base font-medium bg-white/5 px-4 py-2 rounded-lg border border-white/10">
               <Code size={18} className="text-primary" />
@@ -73,30 +73,6 @@ const Hero = () => {
           </div>
         </motion.div>
       </div>
-
-      {/* Scroll Indicator */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1, duration: 1 }}
-        className="absolute bottom-10 left-1/2 -translate-x-1/2"
-      >
-        {/* The Mouse Outline */}
-        <div className="w-[30px] h-[50px] rounded-3xl border-2 border-white/20 flex justify-center p-2">
-          {/* The Bouncing Dot */}
-          <motion.div
-            animate={{
-              y: [0, 24, 0], // Move down 24px and back up
-            }}
-            transition={{
-              duration: 1.5,
-              repeat: Infinity,
-              ease: "easeInOut"
-            }}
-            className="w-2 h-2 bg-primary rounded-full" 
-          />
-        </div>
-      </motion.div>
     </section>
   );
 };
