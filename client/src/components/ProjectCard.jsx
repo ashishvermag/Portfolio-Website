@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 // 1. Import a variety of useful icons for different domains
-import { Github, ExternalLink, Bot, Database, Code, Globe, Cpu, BookOpen, Server, Shield } from 'lucide-react'; 
+import { Github, ExternalLink, Bot, Database, Code, Globe, Cpu, BookOpen, Server, Shield, Mic } from 'lucide-react'; 
 import { Link } from 'react-router-dom';
 
 const ProjectCard = ({ project }) => {
@@ -19,6 +19,7 @@ const ProjectCard = ({ project }) => {
       case 'book': return <BookOpen size={40} className={iconClass} />;
       case 'server': return <Server size={40} className={iconClass} />;
       case 'shield': return <Shield size={40} className={iconClass} />;
+      case 'mic': return <Mic size={40} className={iconClass} />;
       default: return <Code size={40} className={iconClass} />; // Generic code icon if nothing matches
     }
   };

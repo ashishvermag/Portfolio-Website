@@ -40,5 +40,16 @@ export const projectsData = [
     technologies: ["C++", "POSIX Sockets", "TCP/UDP", "Cryptography"],
     githubLink: "https://github.com/ashishvermag/Hybrid-Socket-Communication/tree/main", 
     liveLink: ""
+  },
+  {
+    id: "voice-dictionary", 
+    title: "Voice-Based Dictionary Search",
+    image: null, 
+    isAcademic: true, 
+    fallbackIcon: "mic", 
+    description: "A real-time speech recognition system built in C/C++ using Hidden Markov Models (HMM) to instantly fetch word definitions via voice commands.",
+    technologies: ["C++", "HMM", "Speech Recognition", "VS 2010"],
+    githubLink: "https://github.com/your-username/your-repo-link", 
+    liveLink: ""
   }
 ];

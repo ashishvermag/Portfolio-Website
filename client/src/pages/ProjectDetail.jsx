@@ -6,6 +6,7 @@ import ProjectOne from './projects/ProjectOne';
 import PdfChatbot from './projects/PdfChatbot';
 import LogicSynthesis from './projects/LogicSynthesis';
 import HybridSocket from './projects/HybridSocket';
+import VoiceDictionary from './projects/VoiceDictionary';
 
 const ProjectDetail = () => {
   const { id } = useParams();
@@ -15,7 +16,8 @@ const ProjectDetail = () => {
     "project-one": <ProjectOne />,
     "pdf-chatbot": <PdfChatbot />,
     "logic-synthesis": <LogicSynthesis />,
-    "hybrid-socket": <HybridSocket />
+    "hybrid-socket": <HybridSocket />,
+    "voice-dictionary": <VoiceDictionary />
     // You will add new projects here as you create them! Just follow the pattern: "url-id": <ComponentName />
   };
 
