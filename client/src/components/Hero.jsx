@@ -19,7 +19,7 @@ const Hero = () => {
           className="space-y-6"
         >
           {/* Greeting Pill */}
-          <div className="inline-block px-4 py-2 border border-white/10 rounded-full bg-white/5 backdrop-blur-sm">
+          <div className="inline-block px-4 py-2 border mt-10 border-white/10 rounded-full bg-white/5 backdrop-blur-sm">
             <span className="text-primary font-medium tracking-wide text-sm">
               🎓 M.Tech CSE @ IIT Guwahati
             </span>
