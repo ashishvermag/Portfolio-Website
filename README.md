@@ -7,7 +7,7 @@
 
 A high-performance, modular personal portfolio built with React and Tailwind CSS. This application serves as a comprehensive showcase of my academic achievements at IIT Guwahati, competitive programming statistics, and technical projects spanning Systems Engineering, Machine Learning, and Full-Stack Development.
 
-🔗 **Live Demo:** [Insert Your Live Link Here]
+🔗 **Live Demo:** https://dev-portfolio-ashish.vercel.app/
 
 ---
 
@@ -21,7 +21,7 @@ A high-performance, modular personal portfolio built with React and Tailwind CSS
 
 ---
 
-## 🏆 Achievements Highlighted
+## 🏆 Achievements
 
 * **GATE CSE AIR 733** (99.40 %ile) among 123,967 students.
 * **Codeforces Specialist** (Max rating: 1406).
@@ -39,7 +39,7 @@ A high-performance, modular personal portfolio built with React and Tailwind CSS
 
 ---
 
-## 🚀 Projects Showcased
+## 🚀 Projects
 
 This portfolio highlights my top projects, bridging the gap between low-level systems and high-level AI/Web development:
 
