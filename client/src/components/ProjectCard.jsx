@@ -1,26 +1,27 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-// 1. Import a variety of useful icons for different domains
-import { Github, ExternalLink, Bot, Database, Code, Globe, Cpu, BookOpen, Server, Shield, Mic } from 'lucide-react'; 
+// 1. Updated Imports: Using react-icons (Feather and FontAwesome)
+import { FiGithub, FiExternalLink, FiCode, FiGlobe, FiCpu, FiBookOpen, FiServer, FiShield, FiMic } from "react-icons/fi";
+import { FaRobot, FaDatabase } from "react-icons/fa6"; 
 import { Link } from 'react-router-dom';
 
 const ProjectCard = ({ project }) => {
   const techStack = project.technologies || project.tags || [];
 
-  // 2. THE ICON MAPPER: Returns the right icon based on the string in your data file
+  // 2. THE ICON MAPPER: Now using react-icons
   const renderFallbackIcon = () => {
     const iconClass = "text-primary/50 mb-3 transform group-hover:scale-110 transition-transform duration-500";
     
     switch (project.fallbackIcon) {
-      case 'bot': return <Bot size={40} className={iconClass} />;
-      case 'database': return <Database size={40} className={iconClass} />;
-      case 'globe': return <Globe size={40} className={iconClass} />;
-      case 'cpu': return <Cpu size={40} className={iconClass} />;
-      case 'book': return <BookOpen size={40} className={iconClass} />;
-      case 'server': return <Server size={40} className={iconClass} />;
-      case 'shield': return <Shield size={40} className={iconClass} />;
-      case 'mic': return <Mic size={40} className={iconClass} />;
-      default: return <Code size={40} className={iconClass} />; // Generic code icon if nothing matches
+      case 'bot': return <FaRobot size={40} className={iconClass} />;
+      case 'database': return <FaDatabase size={40} className={iconClass} />;
+      case 'globe': return <FiGlobe size={40} className={iconClass} />;
+      case 'cpu': return <FiCpu size={40} className={iconClass} />;
+      case 'book': return <FiBookOpen size={40} className={iconClass} />;
+      case 'server': return <FiServer size={40} className={iconClass} />;
+      case 'shield': return <FiShield size={40} className={iconClass} />;
+      case 'mic': return <FiMic size={40} className={iconClass} />;
+      default: return <FiCode size={40} className={iconClass} />; // Generic code icon
     }
   };
 
@@ -55,16 +56,16 @@ const ProjectCard = ({ project }) => {
           </div>
         )}
         
-        {/* Hover Overlay with Links */}
+        {/* Hover Overlay with Links - Updated to react-icons */}
         <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-4">
           {project.githubLink && (
             <a href={project.githubLink} target="_blank" rel="noreferrer" className="p-2 bg-white rounded-full hover:bg-primary transition-colors">
-              <Github size={20} className="text-black" />
+              <FiGithub size={20} className="text-black" />
             </a>
           )}
           {project.liveLink && (
             <a href={project.liveLink} target="_blank" rel="noreferrer" className="p-2 bg-white rounded-full hover:bg-primary transition-colors">
-              <ExternalLink size={20} className="text-black" />
+              <FiExternalLink size={20} className="text-black" />
             </a>
           )}
         </div>

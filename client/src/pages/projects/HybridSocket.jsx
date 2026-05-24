@@ -1,13 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowLeft, Server, Shield, Activity, Terminal, Lock, Unlock, ArrowRightLeft, Wifi, Icon, Github, ExternalLinkIcon } from 'lucide-react';
+// Updated Imports: Using react-icons instead of lucide-react
+import { FiArrowLeft, FiServer, FiShield, FiActivity, FiTerminal, FiLock, FiUnlock, FiWifi, FiGithub, FiExternalLink } from 'react-icons/fi';
+import { FaRightLeft } from 'react-icons/fa6';
 
 const HybridSocket = () => {
   return (
     <div className="max-w-6xl mx-auto py-20 px-6">
       {/* Navigation */}
       <Link to="/" className="text-primary hover:underline flex items-center gap-2 mb-12 w-max transition-all hover:-translate-x-1">
-        <ArrowLeft size={20} /> Back to Projects
+        <FiArrowLeft size={20} /> Back to Projects
       </Link>
 
       {/* Hero Section */}
@@ -17,12 +19,12 @@ const HybridSocket = () => {
           {/* Icon and Title Group */}
           <div className="flex items-center gap-4">
             <div className="p-4 bg-primary/10 rounded-2xl border border-primary/20">
-              <Server size={40} className="text-primary" />
+              <FiServer size={40} className="text-primary" />
             </div>
             <h1 className="text-4xl md:text-5xl font-bold text-white">Hybrid Socket Communication</h1>  
           </div>
           
-          {/* GitHub and Live Links Group (Removed md:ml-auto) */}
+          {/* GitHub and Live Links Group */}
           <div className="flex items-center gap-4">
             <a 
               href="https://github.com/ashishvermag/Hybrid-Socket-Communication/tree/main" 
@@ -30,8 +32,7 @@ const HybridSocket = () => {
               rel="noreferrer" 
               className="flex items-center gap-2 px-4 py-2 bg-white/5 hover:bg-primary/20 text-textLight hover:text-primary rounded-full transition-all border border-white/10 hover:border-primary/50"
             >
-              <Github size={25} />
-              
+              <FiGithub size={25} />
             </a>
             
             {/* If you ever deploy a live version, you can uncomment this! */}
@@ -41,11 +42,9 @@ const HybridSocket = () => {
               rel="noreferrer" 
               className="flex items-center gap-2 px-4 py-2 bg-primary/10 hover:bg-primary text-primary hover:text-black rounded-full transition-all border border-primary/20"
             >
-              <ExternalLinkIcon size={25} />
-              
+              <FiExternalLink size={25} />
             </a>  */}
           </div>
-
         </div>
         
     
@@ -71,7 +70,7 @@ const HybridSocket = () => {
           {/* Phase 1 */}
           <div className="bg-white/5 border border-white/10 p-8 rounded-2xl relative overflow-hidden group">
             <div className="absolute top-0 right-0 p-6 opacity-10 group-hover:opacity-20 transition-opacity">
-              <Wifi size={100} />
+              <FiWifi size={100} />
             </div>
             <h3 className="text-2xl font-bold text-white mb-2">Phase 1: TCP Handshake</h3>
             <p className="text-primary font-mono text-sm mb-6">Connection Setup & Port Negotiation</p>
@@ -86,7 +85,7 @@ const HybridSocket = () => {
           {/* Phase 2 */}
           <div className="bg-white/5 border border-white/10 p-8 rounded-2xl relative overflow-hidden group">
             <div className="absolute top-0 right-0 p-6 opacity-10 group-hover:opacity-20 transition-opacity">
-              <ArrowRightLeft size={100} />
+              <FaRightLeft size={100} />
             </div>
             <h3 className="text-2xl font-bold text-white mb-2">Phase 2: UDP Transmission</h3>
             <p className="text-primary font-mono text-sm mb-6">Encrypted Data Transfer</p>
@@ -105,7 +104,7 @@ const HybridSocket = () => {
         {/* Encryption Scheme */}
         <div>
           <div className="flex items-center gap-3 mb-6">
-            <Shield className="text-primary" size={28} />
+            <FiShield className="text-primary" size={28} />
             <h2 className="text-3xl font-bold text-white">Encryption Scheme</h2>
           </div>
           <p className="text-textGray leading-relaxed mb-6">
@@ -113,21 +112,21 @@ const HybridSocket = () => {
           </p>
           <div className="space-y-4">
             <div className="bg-cardDark p-4 rounded-xl border border-white/5 flex items-start gap-4">
-              <Lock className="text-primary mt-1" size={20} />
+              <FiLock className="text-primary mt-1" size={20} />
               <div>
                 <h4 className="text-white font-bold">1. Block Padding & XOR</h4>
                 <p className="text-sm text-textGray">Plaintext is padded to multiples of 16-bytes, then mutated via bitwise XOR operations against a repeating 16-byte secret key.</p>
               </div>
             </div>
             <div className="bg-cardDark p-4 rounded-xl border border-white/5 flex items-start gap-4">
-              <Activity className="text-primary mt-1" size={20} />
+              <FiActivity className="text-primary mt-1" size={20} />
               <div>
                 <h4 className="text-white font-bold">2. Base64 Encoding</h4>
                 <p className="text-sm text-textGray">The raw binary ciphertext is encoded to Base64 to ensure safe transmission over the network without non-printable character corruption.</p>
               </div>
             </div>
             <div className="bg-cardDark p-4 rounded-xl border border-white/5 flex items-start gap-4">
-              <Unlock className="text-primary mt-1" size={20} />
+              <FiUnlock className="text-primary mt-1" size={20} />
               <div>
                 <h4 className="text-white font-bold">3. Server Decryption</h4>
                 <p className="text-sm text-textGray">The server receives the string, decodes the Base64 layer, and applies the reverse XOR cipher to retrieve the original plaintext.</p>
@@ -139,7 +138,7 @@ const HybridSocket = () => {
         {/* Server Policies */}
         <div>
           <div className="flex items-center gap-3 mb-6">
-            <Terminal className="text-primary" size={28} />
+            <FiTerminal className="text-primary" size={28} />
             <h2 className="text-3xl font-bold text-white">Scheduling Policies</h2>
           </div>
           <p className="text-textGray leading-relaxed mb-6">

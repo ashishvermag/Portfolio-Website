@@ -1,10 +1,12 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, Download, Trophy, Code, Award } from 'lucide-react';
+// Updated Imports: Using react-icons instead of lucide-react
+import { FiArrowRight, FiDownload, FiCode, FiAward } from 'react-icons/fi';
+import { FaTrophy } from 'react-icons/fa6';
 
 const Hero = () => {
   return (
-    <section className="min-h-screen flex items-center justify-center bg-bgDark relative overflow-hidden px-6">
+    <section id="top" className="min-h-screen flex items-center justify-center bg-bgDark relative overflow-hidden px-6">
 
       {/* Background Glow Effect */}
       <div className="absolute top-20 left-1/4 w-72 h-72 bg-primary/20 rounded-full blur-[100px]" />
@@ -39,16 +41,16 @@ const Hero = () => {
           {/* Quick Stats / Achievements Bar */}
           <div className="flex flex-wrap items-center gap-3 md:gap-4 py-2">
             <div className="flex items-center gap-2 text-textLight text-sm md:text-base font-medium bg-white/5 px-4 py-2 rounded-lg border border-white/10">
-              <Trophy size={18} className="text-primary" />
+              <FaTrophy size={18} className="text-primary" />
               <span>GATE AIR 733 <span className="text-textGray font-normal">(99.4%)</span></span>
             </div>
             <div className="flex items-center gap-2 text-textLight text-sm md:text-base font-medium bg-white/5 px-4 py-2 rounded-lg border border-white/10">
-              <Code size={18} className="text-primary" />
-              <span>CF Specialist <span className="text-textGray font-normal">(1406)</span></span>
+              <FiCode size={18} className="text-primary" />
+              <span>CF Specialist <span className="text-textGray font-normal">(1411)</span></span>
             </div>
             <div className="flex items-center gap-2 text-textLight text-sm md:text-base font-medium bg-white/5 px-4 py-2 rounded-lg border border-white/10">
-              <Award size={18} className="text-primary" />
-              <span>900+ LeetCode</span>
+              <FiAward size={18} className="text-primary" />
+              <span>1000+ LeetCode</span>
             </div>
           </div>
 
@@ -59,7 +61,7 @@ const Hero = () => {
               className="px-8 py-3 bg-primary text-white font-semibold rounded-lg hover:bg-blue-600 transition-all flex items-center gap-2 justify-center group"
             >
               View Projects
-              <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
+              <FiArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
             </a>
 
             <a
@@ -67,7 +69,7 @@ const Hero = () => {
               download="Ashish_Resume.pdf"
               className="inline-flex items-center gap-2 px-8 py-3 bg-white/5 text-textLight font-semibold rounded-lg hover:bg-white/10 transition-all border border-white/10 hover:border-white/20 justify-center"
             >
-              <Download size={20} />
+              <FiDownload size={20} />
               Download CV
             </a>
           </div>

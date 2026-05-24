@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { Code, Trophy, Activity, ExternalLink, Star, Users, Building, Calendar } from 'lucide-react';
+// Updated Imports: Using react-icons instead of lucide-react
+import { FiCode, FiActivity, FiExternalLink, FiStar, FiUsers, FiCalendar } from 'react-icons/fi';
+import { FaTrophy, FaBuilding } from 'react-icons/fa6';
 
 const CodingProfiles = () => {
   const [cfData, setCfData] = useState(null);
@@ -41,7 +43,7 @@ const CodingProfiles = () => {
         {/* LeetCode Card (Using dynamic SVG) */}
         <div className="bg-white/5 border border-white/10 p-8 rounded-2xl relative overflow-hidden group hover:border-[#FFA116]/50 transition-colors flex flex-col h-full">
           <div className="absolute top-0 right-0 p-6 opacity-5 group-hover:opacity-10 transition-opacity pointer-events-none">
-            <Code size={120} className="text-[#FFA116]" />
+            <FiCode size={120} className="text-[#FFA116]" />
           </div>
           
           <div className="flex justify-between items-start mb-6 relative z-10">
@@ -52,7 +54,7 @@ const CodingProfiles = () => {
               <p className="text-slate-400 text-sm">@{LC_HANDLE}</p>
             </div>
             <a href={`https://leetcode.com/${LC_HANDLE}`} target="_blank" rel="noreferrer" className="text-slate-400 hover:text-[#FFA116] transition-colors">
-              <ExternalLink size={25} />
+              <FiExternalLink size={25} />
             </a>
           </div>
 
@@ -72,10 +74,9 @@ const CodingProfiles = () => {
         </div>
 
         {/* Codeforces Card (Using API) */}
-        {/* Codeforces Card (Using API) */}
         <div className="bg-white/5 border border-white/10 p-8 rounded-2xl relative overflow-hidden group hover:border-[#3B5998]/50 transition-colors flex flex-col h-full">
           <div className="absolute top-0 right-0 p-6 opacity-5 group-hover:opacity-10 transition-opacity pointer-events-none">
-            <Trophy size={120} className="text-[#3B5998]" />
+            <FaTrophy size={120} className="text-[#3B5998]" />
           </div>
           
           <div className="flex justify-between items-start mb-8 relative z-10">
@@ -96,13 +97,13 @@ const CodingProfiles = () => {
               </div>
             </div>
             <a href={`https://codeforces.com/profile/${CF_HANDLE}`} target="_blank" rel="noreferrer" className="text-slate-400 hover:text-[#3B5998] transition-colors">
-              <ExternalLink size={25} />
+              <FiExternalLink size={25} />
             </a>
           </div>
 
           {cfLoading ? (
              <div className="flex justify-center items-center py-10 text-[#3B5998] flex-grow relative z-10">
-               <Activity className="animate-spin w-8 h-8" />
+               <FiActivity className="animate-spin w-8 h-8" />
              </div>
           ) : cfData ? (
             <div className="relative z-10 flex flex-col flex-grow">
@@ -124,7 +125,7 @@ const CodingProfiles = () => {
               {/* Secondary Stats Grid */}
               <div className="grid grid-cols-2 gap-4 mb-6">
                 
-                {/* Replaced Contribution with Member Since */}
+                {/* Member Since */}
                 <div className="bg-black/20 px-4 py-3 rounded-xl border border-white/5 flex items-center justify-between">
                   <div>
                     <p className="text-slate-400 text-xs mb-1">Member Since</p>
@@ -134,28 +135,28 @@ const CodingProfiles = () => {
                         : "N/A"}
                     </p>
                   </div>
-                  <Calendar size={18} className="text-emerald-500 opacity-50" />
+                  <FiCalendar size={18} className="text-emerald-500 opacity-50" />
                 </div>
 
-                {/* Followers Block remains the same */}
+                {/* Followers Block */}
                 <div className="bg-black/20 px-4 py-3 rounded-xl border border-white/5 flex items-center justify-between">
                   <div>
                     <p className="text-slate-400 text-xs mb-1">Followers</p>
                     <p className="text-lg font-semibold text-white">{cfData.friendOfCount || 0}</p>
                   </div>
-                  <Users size={18} className="text-[#3B5998] opacity-50" />
+                  <FiUsers size={18} className="text-[#3B5998] opacity-50" />
                 </div>
               </div>
 
               {/* Badges / Organization Footer */}
               <div className="mt-auto flex flex-wrap gap-3 text-sm">
                 <span className="text-cyan-400 bg-cyan-400/10 px-4 py-2 rounded-full capitalize flex items-center gap-2 font-semibold border border-cyan-400/20">
-                  <Star size={16} /> {cfData.rank || "Unrated"}
+                  <FiStar size={16} /> {cfData.rank || "Unrated"}
                 </span>
                 
                 {cfData.organization && (
                   <span className="text-slate-300 bg-white/5 border border-white/10 px-4 py-2 rounded-full flex items-center gap-2 font-medium">
-                    <Building size={16} className="text-slate-400" /> 
+                    <FaBuilding size={16} className="text-slate-400" /> 
                     {/* Truncate long org names like IITG to keep UI clean */}
                     {cfData.organization.length > 25 ? `${cfData.organization.substring(0, 25)}...` : cfData.organization}
                   </span>

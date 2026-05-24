@@ -1,20 +1,22 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowLeft, Cpu, Network, Zap, Activity, Brain, Database, LineChart, Target } from 'lucide-react';
+// Updated Imports: Using react-icons instead of lucide-react
+import { FiArrowLeft, FiCpu, FiActivity, FiDatabase, FiTarget, FiZap } from 'react-icons/fi';
+import { FaNetworkWired, FaBrain, FaChartLine } from 'react-icons/fa6';
 
 const LogicSynthesis = () => {
   return (
     <div className="max-w-6xl mx-auto py-20 px-6">
       {/* Navigation */}
       <Link to="/" className="text-primary hover:underline flex items-center gap-2 mb-12 w-max transition-all hover:-translate-x-1">
-        <ArrowLeft size={20} /> Back to Projects
+        <FiArrowLeft size={20} /> Back to Projects
       </Link>
 
       {/* Hero Section */}
       <div className="mb-16 border-b border-white/10 pb-16">
         <div className="flex items-center gap-4 mb-6">
           <div className="p-4 bg-primary/10 rounded-2xl border border-primary/20">
-            <Cpu size={40} className="text-primary" />
+            <FiCpu size={40} className="text-primary" />
           </div>
           <h1 className="text-4xl md:text-5xl font-bold text-white">Logic Synthesis Using GCN & CNN</h1>
         </div>
@@ -46,10 +48,10 @@ const LogicSynthesis = () => {
         
         {/* Key Achievements Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          <MetricCard icon={<Target />} title="95.66% Accuracy Boost" desc="RMSE dropped from 565.66 to 24.57 after fine-tuning with just 100 samples." />
-          <MetricCard icon={<Zap />} title="4.02% Delay Reduction" desc="Discovered synthesis recipes that outperformed the best-known baseline recipes." />
-          <MetricCard icon={<Network />} title="Graph Encoding" desc="Processed AIG nodes into [1x128] embeddings using a robust GCN architecture." />
-          <MetricCard icon={<Brain />} title="Simulated Annealing" desc="Navigated the discrete recipe search space efficiently to avoid local optima traps." />
+          <MetricCard icon={<FiTarget size={24} />} title="95.66% Accuracy Boost" desc="RMSE dropped from 565.66 to 24.57 after fine-tuning with just 100 samples." />
+          <MetricCard icon={<FiZap size={24} />} title="4.02% Delay Reduction" desc="Discovered synthesis recipes that outperformed the best-known baseline recipes." />
+          <MetricCard icon={<FaNetworkWired size={24} />} title="Graph Encoding" desc="Processed AIG nodes into [1x128] embeddings using a robust GCN architecture." />
+          <MetricCard icon={<FaBrain size={24} />} title="Simulated Annealing" desc="Navigated the discrete recipe search space efficiently to avoid local optima traps." />
         </div>
       </div>
 
@@ -58,7 +60,7 @@ const LogicSynthesis = () => {
         <h2 className="text-3xl font-bold text-white mb-8">Dual-Encoding Architecture</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <div className="bg-white/5 border border-white/10 p-8 rounded-2xl">
-            <Network className="text-primary mb-4" size={32} />
+            <FaNetworkWired className="text-primary mb-4" size={32} />
             <h3 className="text-xl font-bold text-white mb-4">1. AIG Graph Encoder (GCN)</h3>
             <p className="text-textGray text-sm leading-relaxed mb-4">
               Circuits are represented as And-Inverter Graphs. Nodes (Primary Inputs, Outputs, and Gates) are converted into one-hot encodings. A Graph Convolutional Network captures structural properties, aggregating neighboring nodes into a fixed [1x128] embedding via max/mean pooling.
@@ -66,7 +68,7 @@ const LogicSynthesis = () => {
           </div>
           
           <div className="bg-white/5 border border-white/10 p-8 rounded-2xl">
-            <Database className="text-primary mb-4" size={32} />
+            <FiDatabase className="text-primary mb-4" size={32} />
             <h3 className="text-xl font-bold text-white mb-4">2. Recipe Encoder (CNN)</h3>
             <p className="text-textGray text-sm leading-relaxed mb-4">
               Synthesis recipes (e.g., 'b', 'rw', 'rf') are mapped to integers. A multi-kernel CNN (kernel sizes 3, 4, 5, 6) processes the sequence to capture transformation order dependencies, outputting a [1x64] tensor representation.
@@ -74,7 +76,7 @@ const LogicSynthesis = () => {
           </div>
 
           <div className="bg-white/5 border border-white/10 p-8 rounded-2xl">
-            <Activity className="text-primary mb-4" size={32} />
+            <FiActivity className="text-primary mb-4" size={32} />
             <h3 className="text-xl font-bold text-white mb-4">3. Active Few-Shot Fusion</h3>
             <p className="text-textGray text-sm leading-relaxed mb-4">
               The zero-shot base model is fine-tuned for unseen circuits. K-means clustering identifies diverse recipe centroids. Only these highly informative recipes are synthesized for ground-truth labels, drastically minimizing computational overhead.
@@ -86,7 +88,7 @@ const LogicSynthesis = () => {
       {/* Implementation Realities (Limitations & Scale) */}
       <div className="bg-cardDark border border-white/10 rounded-2xl p-8 md:p-12 mb-16">
         <div className="flex items-center gap-3 mb-8">
-          <LineChart className="text-primary" size={28} />
+          <FaChartLine className="text-primary" size={28} />
           <h2 className="text-3xl font-bold text-white">Implementation vs. Theory</h2>
         </div>
         <p className="text-textGray mb-8">

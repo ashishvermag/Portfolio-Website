@@ -1,12 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowLeft } from 'lucide-react';
+// Updated Import: Using react-icons instead of lucide-react
+import { FiArrowLeft } from 'react-icons/fi';
 
 const ProjectOne = () => {
   return (
     <div className="max-w-5xl mx-auto py-20 px-6">
       <Link to="/" className="text-primary hover:underline flex items-center gap-2 mb-8">
-        <ArrowLeft size={20} /> Back to Projects
+        <FiArrowLeft size={20} /> Back to Projects
       </Link>
       
       <h1 className="text-5xl font-bold mb-6">My First Project</h1>

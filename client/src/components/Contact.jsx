@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
-import { Github, Linkedin, Mail, Send, CheckCircle, AlertCircle, GraduationCap } from 'lucide-react';
+import { FiMenu, FiX, FiGithub, FiLinkedin, FiSend } from "react-icons/fi";
+import { SiLeetcode } from "react-icons/si";
+import { CiMail } from "react-icons/ci";
+import { FaGraduationCap } from "react-icons/fa6";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -17,7 +20,6 @@ const Contact = () => {
     e.preventDefault();
     setStatus('submitting');
 
-    // Replace 'YOUR_ACCESS_KEY_HERE' with your actual Web3Forms key
     const accessKey = "e7423352-c9ba-4305-8ae8-bd0748282cd2"; 
 
     try {
@@ -66,7 +68,7 @@ const Contact = () => {
           <div className="flex flex-col gap-6 mb-10">
             <div className="flex items-center gap-4">
               <div className="p-3 bg-primary/10 text-primary rounded-xl shrink-0">
-                <Mail size={24} />
+                <CiMail size={24} />
               </div>
               <div>
                 <p className="text-slate-400 text-sm font-medium mb-1">Personal Email</p>
@@ -78,7 +80,7 @@ const Contact = () => {
 
             <div className="flex items-center gap-4">
               <div className="p-3 bg-primary/10 text-primary rounded-xl shrink-0">
-                <GraduationCap size={24} />
+                <FaGraduationCap size={24} />
               </div>
               <div>
                 <p className="text-slate-400 text-sm font-medium mb-1">College Email (IITG)</p>
@@ -92,18 +94,26 @@ const Contact = () => {
           {/* Social Links Row */}
           <div>
             <p className="text-slate-400 text-sm font-medium mb-4">Social Profiles</p>
-            <div className="flex gap-4">
+            {/* Added flex-wrap here so the buttons flow naturally without breaking the layout */}
+            <div className="flex flex-wrap gap-4">
               <a href="https://github.com/ashishvermag" target="_blank" rel="noreferrer" className="px-5 py-3 bg-white/5 rounded-xl hover:bg-primary/20 hover:text-primary transition-all border border-white/10 hover:border-primary/50 text-white group flex items-center gap-3">
-                <Github size={20} className="group-hover:scale-110 transition-transform" />
+                <FiGithub size={20} className="group-hover:scale-110 transition-transform" />
                 <span className="font-medium text-sm">GitHub</span>
               </a>
               <a href="https://linkedin.com/in/ashish-verma1001" target="_blank" rel="noreferrer" className="px-5 py-3 bg-white/5 rounded-xl hover:bg-primary/20 hover:text-primary transition-all border border-white/10 hover:border-primary/50 text-white group flex items-center gap-3">
-                <Linkedin size={20} className="group-hover:scale-110 transition-transform" />
+                <FiLinkedin size={20} className="group-hover:scale-110 transition-transform" />
                 <span className="font-medium text-sm">LinkedIn</span>
+              </a>
+              <a href="https://x.com/AshishV1001" target="_blank" rel="noreferrer" className="px-5 py-3 bg-white/5 rounded-xl hover:bg-primary/20 hover:text-primary transition-all border border-white/10 hover:border-primary/50 text-white group flex items-center gap-3">
+                <FiX size={20} className="group-hover:scale-110 transition-transform" />
+                <span className="font-medium text-sm">X (Twitter)</span>
+              </a>
+              <a href="https://leetcode.com/u/ashish_verma101/" target="_blank" rel="noreferrer" className="px-5 py-3 bg-white/5 rounded-xl hover:bg-primary/20 hover:text-primary transition-all border border-white/10 hover:border-primary/50 text-white group flex items-center gap-3">
+                <SiLeetcode size={20} className="group-hover:scale-110 transition-transform" />
+                <span className="font-medium text-sm">LeetCode</span>
               </a>
             </div>
           </div>
-
         </div>
 
         {/* Right Side - Form */}
@@ -156,7 +166,7 @@ const Contact = () => {
               disabled={status === 'submitting' || status === 'success'}
               className="mt-2 w-full py-4 bg-primary text-black font-bold rounded-xl hover:bg-primary/90 transition-all flex justify-center items-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed"
             >
-              {status === 'idle' && <><Send size={20} /> Send Message</>}
+              {status === 'idle' && <><FiSend size={20} /> Send Message</>}
               {status === 'submitting' && 'Sending...'}
               {status === 'success' && <><CheckCircle size={20} /> Sent Successfully!</>}
               {status === 'error' && <><AlertCircle size={20} /> Failed to Send. Try again.</>}

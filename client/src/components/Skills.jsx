@@ -1,6 +1,8 @@
 // client/src/components/Skills.jsx
 import React from 'react';
-import { Terminal, Database, Globe } from 'lucide-react';
+// Updated Imports: Using react-icons instead of lucide-react
+import { FiTerminal, FiGlobe } from 'react-icons/fi';
+import { FaDatabase } from 'react-icons/fa6';
 
 const Skills = () => {
   return (
@@ -12,7 +14,7 @@ const Skills = () => {
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         <div className="bg-white/5 border border-white/10 p-8 rounded-2xl">
-          <Terminal className="text-primary mb-6 w-10 h-10" />
+          <FiTerminal className="text-primary mb-6 w-10 h-10" />
           <h3 className="text-xl font-bold text-white mb-4">Systems & Core</h3>
           <p className="text-slate-400 mb-6 text-sm leading-relaxed">Low-level architecture, parallel algorithms, and competitive programming.</p>
           <div className="flex flex-wrap gap-2">
@@ -23,7 +25,7 @@ const Skills = () => {
         </div>
 
         <div className="bg-white/5 border border-white/10 p-8 rounded-2xl">
-          <Globe className="text-primary mb-6 w-10 h-10" />
+          <FiGlobe className="text-primary mb-6 w-10 h-10" />
           <h3 className="text-xl font-bold text-white mb-4">Web Technologies</h3>
           <p className="text-slate-400 mb-6 text-sm leading-relaxed">Building scalable and secure full-stack web applications and APIs.</p>
           <div className="flex flex-wrap gap-2">
@@ -34,7 +36,7 @@ const Skills = () => {
         </div>
 
         <div className="bg-white/5 border border-white/10 p-8 rounded-2xl">
-          <Database className="text-primary mb-6 w-10 h-10" />
+          <FaDatabase className="text-primary mb-6 w-10 h-10" />
           <h3 className="text-xl font-bold text-white mb-4">Databases & Tools</h3>
           <p className="text-slate-400 mb-6 text-sm leading-relaxed">Managing persistent data storage, version control, and IDEs.</p>
           <div className="flex flex-wrap gap-2">

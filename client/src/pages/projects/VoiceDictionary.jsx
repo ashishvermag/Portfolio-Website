@@ -1,13 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowLeft, Mic, BookOpen, Volume2, Activity, Github, ExternalLink, Settings } from 'lucide-react';
+// Updated Imports: Using react-icons instead of lucide-react
+import { FiArrowLeft, FiMic, FiBookOpen, FiVolume2, FiActivity, FiGithub, FiExternalLink, FiSettings } from 'react-icons/fi';
 
 const VoiceDictionary = () => {
   return (
     <div className="max-w-6xl mx-auto py-20 px-6">
       {/* Navigation */}
       <Link to="/" className="text-primary hover:underline flex items-center gap-2 mb-12 w-max transition-all hover:-translate-x-1">
-        <ArrowLeft size={20} /> Back to Projects
+        <FiArrowLeft size={20} /> Back to Projects
       </Link>
 
       {/* Hero Section (Using our locked single-row layout!) */}
@@ -15,7 +16,7 @@ const VoiceDictionary = () => {
         <div className="flex items-center gap-4 md:gap-6 mb-6 w-full">
           
           <div className="p-3 md:p-4 bg-primary/10 rounded-2xl border border-primary/20 shrink-0">
-            <Mic className="text-primary w-8 h-8 md:w-10 md:h-10" />
+            <FiMic className="text-primary w-8 h-8 md:w-10 md:h-10" />
           </div>
           
           <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold text-white">
@@ -29,7 +30,7 @@ const VoiceDictionary = () => {
               rel="noreferrer" 
               className="flex items-center gap-2 px-3 py-2 md:px-4 md:py-2 bg-white/5 hover:bg-primary/20 text-textLight hover:text-primary rounded-full transition-all border border-white/10 hover:border-primary/50"
             >
-              <Github size={25} />
+              <FiGithub size={25} />
             </a>
           </div>
         </div>
@@ -59,7 +60,7 @@ const VoiceDictionary = () => {
           </p>
           <div className="bg-cardDark border border-white/10 rounded-2xl p-6">
             <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-3">
-              <Activity className="text-primary" size={24} /> 
+              <FiActivity className="text-primary" size={24} /> 
               Hidden Markov Models
             </h3>
             <p className="text-textGray text-sm leading-relaxed">
@@ -73,17 +74,17 @@ const VoiceDictionary = () => {
           <h2 className="text-3xl font-bold text-white mb-6">System Features</h2>
           <div className="space-y-4">
             <FeatureRow 
-              icon={<Volume2 />} 
+              icon={<FiVolume2 />} 
               title="Real-Time Processing" 
               desc="Captures live audio input and processes the waveform instantly against the trained acoustic models." 
             />
             <FeatureRow 
-              icon={<BookOpen />} 
+              icon={<FiBookOpen />} 
               title="Dictionary Lookup" 
               desc="Successfully classified words trigger an immediate dictionary retrieval, displaying the definition to the user." 
             />
             <FeatureRow 
-              icon={<Settings />} 
+              icon={<FiSettings />} 
               title="Accent Tolerance" 
               desc="Statistical variance built into the HMM training data allows the engine to recognize words despite regional accents." 
             />

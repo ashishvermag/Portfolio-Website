@@ -1,20 +1,22 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowLeft, Bot, Database, FileText, GitMerge, MessageSquare, Settings } from 'lucide-react';
+// Updated Imports: Using react-icons instead of lucide-react
+import { FiArrowLeft, FiDatabase, FiFileText, FiMessageSquare, FiSettings } from 'react-icons/fi';
+import { FaRobot, FaCodeBranch } from 'react-icons/fa6'; // Used CodeBranch for GitMerge equivalent
 
 const PdfChatbot = () => {
   return (
     <div className="max-w-6xl mx-auto py-20 px-6">
       {/* Navigation */}
       <Link to="/" className="text-primary hover:underline flex items-center gap-2 mb-12 w-max transition-all hover:-translate-x-1">
-        <ArrowLeft size={20} /> Back to Projects
+        <FiArrowLeft size={20} /> Back to Projects
       </Link>
 
       {/* Hero Section */}
       <div className="mb-16 border-b border-white/10 pb-16">
         <div className="flex items-center gap-4 mb-6">
           <div className="p-4 bg-primary/10 rounded-2xl border border-primary/20">
-            <Bot size={40} className="text-primary" />
+            <FaRobot size={40} className="text-primary" />
           </div>
           <h1 className="text-4xl md:text-5xl font-bold text-white">Multi-Agent PDF Chatbot</h1>
         </div>
@@ -36,11 +38,11 @@ const PdfChatbot = () => {
       <div className="mb-20">
         <h2 className="text-3xl font-bold text-white mb-8">Platform Features</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          <FeatureCard icon={<FileText />} title="Dynamic Creation" desc="Upload any PDF and instantly generate a specialized AI agent knowledgeable about its specific contents." />
-          <FeatureCard icon={<MessageSquare />} title="Persistent Memory" desc="Chat histories are saved locally. Close the app and return later to pick up exactly where you left off." />
-          <FeatureCard icon={<GitMerge />} title="Source-Cited Answers" desc="Every AI response includes the exact text chunks extracted from the source document to guarantee trust." />
-          <FeatureCard icon={<Database />} title="Multi-Agent System" desc="Seamlessly create, switch between, and manage multiple agents, each with an isolated vector database." />
-          <FeatureCard icon={<Settings />} title="Granular Control" desc="Complete chat management including wiping specific agent histories or permanently deleting agents and their databases." />
+          <FeatureCard icon={<FiFileText size={24} />} title="Dynamic Creation" desc="Upload any PDF and instantly generate a specialized AI agent knowledgeable about its specific contents." />
+          <FeatureCard icon={<FiMessageSquare size={24} />} title="Persistent Memory" desc="Chat histories are saved locally. Close the app and return later to pick up exactly where you left off." />
+          <FeatureCard icon={<FaCodeBranch size={24} />} title="Source-Cited Answers" desc="Every AI response includes the exact text chunks extracted from the source document to guarantee trust." />
+          <FeatureCard icon={<FiDatabase size={24} />} title="Multi-Agent System" desc="Seamlessly create, switch between, and manage multiple agents, each with an isolated vector database." />
+          <FeatureCard icon={<FiSettings size={24} />} title="Granular Control" desc="Complete chat management including wiping specific agent histories or permanently deleting agents and their databases." />
         </div>
       </div>
 
