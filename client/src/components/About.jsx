@@ -96,7 +96,7 @@ const About = () => {
           <div className="bg-black/20 border border-white/10 rounded-2xl p-6 md:p-8 space-y-6">
             <div className="flex flex-col md:flex-row gap-4 justify-between border-b border-white/5 pb-6">
               <div>
-                <h3 className="text-lg font-bold text-white">GATE CSE 2023 - AIR 733</h3>
+                <h3 className="text-lg font-bold text-white">GATE CSE 2024 - AIR 733</h3>
                 <p className="text-slate-400 text-sm mt-1">Graduate Aptitude Test in Engineering</p>
               </div>
               <div className="text-right">
