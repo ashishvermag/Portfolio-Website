@@ -7,6 +7,7 @@ import PdfChatbot from './projects/PdfChatbot';
 import LogicSynthesis from './projects/LogicSynthesis';
 import HybridSocket from './projects/HybridSocket';
 import VoiceDictionary from './projects/VoiceDictionary';
+import LogicFlow from './projects/LogicFlow';
 
 const ProjectDetail = () => {
   const { id } = useParams();
@@ -14,6 +15,7 @@ const ProjectDetail = () => {
   // 2. The Registry: Map the URL id to the specific component
   const projectRegistry = {
     "project-one": <ProjectOne />,
+    "logicflow": <LogicFlow />,
     "pdf-chatbot": <PdfChatbot />,
     "logic-synthesis": <LogicSynthesis />,
     "hybrid-socket": <HybridSocket />,

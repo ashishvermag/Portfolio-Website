@@ -9,6 +9,17 @@ export const projectsData = [
     liveLink: "https://your-live-link.com"
   },
   {
+    id: "logicflow", 
+    title: "LogicFlow",
+    image: "./public/images/logicflow-home.png", // This is the path to your image in the public folder
+    isAcademic: false, 
+    fallbackIcon: "monitor", // Or "layers" / "monitor" depending on what your icon renderer looks for
+    description: "An interactive educational platform using animations to explain High-Level Design (HLD) and real-world system architecture.",
+    technologies: ["React", "Framer Motion", "System Design", "HLD"],
+    githubLink: "https://github.com/ashishvermag/LogicFlow",
+    liveLink: "https://logicflowhld.vercel.app/"
+  },
+  {
     id: "pdf-chatbot", 
     title: "Multi-Agent PDF Chatbot",
     image: null, // Set to null so your sleek Text-Decoration fallback kicks in!
