@@ -11,7 +11,7 @@ export const projectsData = [
   {
     id: "logicflow", 
     title: "LogicFlow",
-    image: "./public/images/logicflow-home.png", // This is the path to your image in the public folder
+    image: "/images/logicflow-home.png", // This is the path to your image in the public folder
     isAcademic: false, 
     fallbackIcon: "monitor", // Or "layers" / "monitor" depending on what your icon renderer looks for
     description: "An interactive educational platform using animations to explain High-Level Design (HLD) and real-world system architecture.",
